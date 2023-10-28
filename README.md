@@ -8,7 +8,10 @@ Note that each directory currently has at least one file in it to ensure that gi
 
 wiringpi
 https://roboticsbackend.com/introduction-to-wiringpi-for-raspberry-pi/     -c++
+
 https://github.com/WiringPi/WiringPi-Python 
+
+
 https://github.com/gpiozero/gpiozero -alternative
 
 git ssh
