@@ -12,3 +12,5 @@ https://github.com/WiringPi/WiringPi-Python
 
 git ssh
 https://www.warp.dev/terminus/git-clone-ssh
+
+ubuntu https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
