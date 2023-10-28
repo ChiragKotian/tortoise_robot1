@@ -9,8 +9,12 @@ Note that each directory currently has at least one file in it to ensure that gi
 wiringpi
 https://roboticsbackend.com/introduction-to-wiringpi-for-raspberry-pi/     -c++
 https://github.com/WiringPi/WiringPi-Python 
+https://github.com/gpiozero/gpiozero -alternative
 
 git ssh
 https://www.warp.dev/terminus/git-clone-ssh
 
 ubuntu https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
+
+multi-threading 
+https://www.geeksforgeeks.org/multithreading-python-set-1/
