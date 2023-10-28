@@ -6,7 +6,8 @@ It is recommended that you keep the repo/package name the same, but if you do ch
 
 Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
 
-wiringpi
+###wiringpi
+
 https://roboticsbackend.com/introduction-to-wiringpi-for-raspberry-pi/     -c++
 
 https://github.com/WiringPi/WiringPi-Python 
@@ -14,10 +15,15 @@ https://github.com/WiringPi/WiringPi-Python
 
 https://github.com/gpiozero/gpiozero -alternative
 
-git ssh
+###git ssh
+
 https://www.warp.dev/terminus/git-clone-ssh
 
-ubuntu https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
+###ubuntu 
 
-multi-threading 
+https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
+
+###multi-threading 
+
+
 https://www.geeksforgeeks.org/multithreading-python-set-1/
