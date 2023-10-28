@@ -4,10 +4,10 @@ import time
 freq = 10000.0
 duty = 0.5
 
-speed_pin_right=13
+speed_pin_right=13 #right_motor
 dir1_right=5   #1 for forward
 dir2_right=6   #1 for backward
-speed_pin_left=12
+speed_pin_left=12 #left_motor
 dir1_left=16   #1 for backward
 dir2_left=20   #1 for forward
 
@@ -25,29 +25,49 @@ def pwm(duty, freq, pin):
 
 def set_pins():
     global speed_pin_right, dir1_right, dir2_right, speed_pin_left, dir1_left, dir2_left
-    wiringpi.pinMode(speed_pin_right, 1)
+    wiringpi.pinMode(speed_pin_right, 1) #1 means output
+    wiringpi.pinMode(dir1_right, 1)
+    wiringpi.pinMode(dir2_right, 1)
+    wiringpi.pinMode(speed_pin_left, 1)
+    wiringpi.pinMode(dir1_left, 1)
+    wiringpi.pinMode(dir2_left, 1)
     
 
-def set_dir(wheel, dir):
-    if(wheel):
-        wheel = true
+def set_dir(wheel, dir): 
+    global dir1_right, dir2_right, dir1_left, dir2_left
+    if(wheel): #1 is left, 1 if forward
+        if(dir):
+            wiringpi.digitalWrite(dir1_left, ~(dir))
+            wiringpi.digitalWrite(dir2_left, dir)
+        else:
+            wiringpi.digitalWrite(dir1_left, dir)
+            wiringpi.digitalWrite(dir2_left, ~(dir))
+    else:
+        if(dir):
+            wiringpi.digitalWrite(dir1_right, dir)
+            wiringpi.digitalWrite(dir2_right, ~(dir))
+        else:
+            wiringpi.digitalWrite(dir1_right, ~(dir))
+            wiringpi.digitalWrite(dir2_right, dir)
+    
 
 
 
  
-
-wiringpi.pinMode(16, 1)       
-wiringpi.digitalWrite(16, 0) 
-wiringpi.pinMode(20, 1)       
-wiringpi.digitalWrite(20, 1) 
-wiringpi.pinMode(12, 1)       # Set pin 6 to 1 ( OUTPUT )
-wiringpi.digitalWrite(12, 1) 
-print("high")
-time.sleep(5)
-wiringpi.digitalWrite(6, 0) 
-wiringpi.digitalWrite(13, 0)
-wiringpi.digitalWrite(5, 0)
-wiringpi.digitalWrite(16, 0)
-wiringpi.digitalWrite(20, 0)
-wiringpi.digitalWrite(12, 0)
-print("low")
+set_pins()
+set_dir(1, 1)
+set_dir(0, 1)      
+wiringpi.digitalWrite(speed_pin_left, 1) 
+wiringpi.digitalWrite(speed_pin_right, 1)
+time.sleep(1)
+set_dir(1, 0)
+set_dir(0, 0)
+time.sleep(1)
+set_dir(1, 1)
+set_dir(0, 0)
+time.sleep(1)
+set_dir(1, 0)
+set_dir(0, 1)
+time.sleep(1)
+wiringpi.digitalWrite(speed_pin_left, 0)
+wiringpi.digitalWrite(speed_pin_right, 0)
