@@ -27,3 +27,10 @@ https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 
 
 https://www.geeksforgeeks.org/multithreading-python-set-1/
+
+
+###small error in xacro urdf file can cause unidentifiable errors
+
+###I am using ydlidarX2
+
+https://www.ydlidar.com/service_support.html
