@@ -29,6 +29,9 @@ https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html
 https://www.geeksforgeeks.org/multithreading-python-set-1/
 
 
+##ydlidar
+https://github.com/YDLIDAR/YDLidar-SDK/issues/22
+
 ###small error in xacro urdf file can cause unidentifiable errors
 
 ###I am using ydlidarX2
